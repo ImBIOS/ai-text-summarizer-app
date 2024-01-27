@@ -1,52 +1,3 @@
-.cta-section {
-  background-color: #f2f2f2;
-  padding: 40px;
-}
-
-.cta-content {
-  justify-content: center;
-  display: flex;
-  flex-wrap: nowrap;
-}
-
-.cta-text {
-  flex-basis: 50%;
-  padding-right: 20px;
-}
-
-.cta-content h2 {
-  font-size: 25px;
-  color: #333;
-  margin-bottom: 10px;
-}
-
-.cta-content p {
-  font-size: 16px;
-  color: #666;
-  padding-bottom: 10px;
-}
-
-.cta-button {
-  padding: 10px 20px;
-  border: 1px solid #A6A6A6;
-  width: 300px;
-  max-height: 40px;
-  color: #333;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  border-color: #333333;
-}
-
-img {
-  max-height:200px;
-  max-width: auto;
-}
-
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #f5f5f5;
@@ -122,7 +73,7 @@ textarea {
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
-  cursor: pointer;
+  cursor: not-allowed;
   margin-bottom: -5px;
 }
 
@@ -143,6 +94,58 @@ textarea {
     margin: auto;
     border: 4px solid transparent;
     border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: button-loading-spinner 1s ease infinite;
+}
+
+.example-button {
+  position: relative;
+  background-color: transparent;
+  color: #000;
+  font-weight: bold;
+  border-radius: 4px;
+  border: black 1px solid;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 5px 0;
+}
+
+.example-button-text {
+  color: #000;
+  transition: all 0.2s;
+}
+
+.example-button:disabled{
+  position: relative;
+  background-color: transparent;
+  color: #000;
+  opacity: 40%;
+  font-weight: bold;
+  border-radius: 4px;
+  border: black 1px solid;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: not-allowed;
+  margin: 5px 0;
+}
+
+.example-button--loading .example-button-text {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.example-button--loading::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 4px solid transparent;
+    border-top-color: #000;
     border-radius: 50%;
     animation: button-loading-spinner 1s ease infinite;
 }

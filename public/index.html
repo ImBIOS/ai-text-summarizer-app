@@ -14,7 +14,10 @@
     <div class="container">
       <div class="text-box">
         <textarea id="text_to_summarize" name="text_to_summarize" placeholder="Paste in some text to summarize. (Min length is 200 chars. Max length is 100,000 chars.)" maxlength="100000"></textarea>
-        <button id="submit-button" class="submit-button" >
+        <button id="example-button" class="example-button" type="button" >
+          <span class="example-button-text">Use Example Text</span>
+        </button>
+        <button id="submit-button" class="submit-button" type="submit" >
           <span class="submit-button-text">Summarize</span>
         </button>
       </div>
@@ -22,16 +25,6 @@
       <textarea id="summary" name="summarized_text" placeholder="Summarized text will appear here"> </textarea>
       </div>
     </div>
-    <section class="cta-section">
-      <div class="cta-content">
-        <div class="cta-text">
-        <h2>Curious how to build this app?</h2>
-        <p>Join Postman's Student Program and elevate your software development and API knowledge to help you in your career.</p>
-          <a href="https://www.postman.com/student-program/student-expert/?utm_campaign=CGC&utm_medium=referral&utm_source=internal&utm_term=pbl-skilljar&utm_content=pbl_summariser_app" class="cta-button" target="_blank" rel="noopener nofollow">Register as student</a>
-        </div>
-        <img src="images/learning.png"></img>
-      </div>
-    </section>
     <script src="script.js"></script>
   </body>
 </html>
