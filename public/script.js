@@ -23,3 +23,14 @@ function verifyTextLength(e) {
     submitButton.disabled = true;
   }
 }
+
+function submitData(e) {
+
+  // This is used to add animation to the submit button
+  submitButton.classList.add("submit-button--loading");
+
+  const text_to_summarize = textArea.value;
+
+  // INSERT CODE SNIPPET FROM POSTMAN BELOW
+
+}
